@@ -1,0 +1,21 @@
+<a class="btn btn-primary" routerLink="/insertProduct">New</a>
+<hr>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name:</th>
+      <th scope="col">Description:</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.name}}</td>
+      <td>{{product.description}}</td>
+      <td>
+        <a class="btn btn-success" routerLink="/editProduct/{{product.id}}">Edit</a>
+        <a class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

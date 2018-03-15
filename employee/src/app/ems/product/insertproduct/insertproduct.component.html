@@ -1,0 +1,10 @@
+<form action="" (submit)="addProduct()">
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="model.name" name="name">
+<br>
+<label for="">Description</label>
+<input type="text" [(ngModel)]="model.description" name="description">
+<br>
+<button type="submit" class="btn btn-success">Save</button>
+<a class="btn btn-info" (click)="goBack()">Cancel</a>
+</form>
